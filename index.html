@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle de Consumo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 5vw;
+      background-color: #f7f7f7;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, select {
+      padding: 5px;
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #005ecc;
+    }
+    #resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    h3 {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 3vw;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Controle de Consumo</h1>
+
+  <label for="placa">Placa:</label>
+  <input type="text" id="placa" placeholder="Ex: EZT1B46" maxlength="7">
+
+  <h3>Abastecimento 1</h3>
+  <label>Data: <input type="date" id="data1"></label>
+  <label>Litros: <input type="number" id="litros1" step="0.01"></label>
+  <label>KM: <input type="number" id="km1"></label>
+
+  <h3>Abastecimento 2</h3>
+  <label>Data: <input type="date" id="data2"></label>
+  <label>Litros: <input type="number" id="litros2" step="0.01"></label>
+  <label>KM: <input type="number" id="km2"></label>
+
+  <h3>Abastecimento 3</h3>
+  <label>Data: <input type="date" id="data3"></label>
+  <label>Litros: <input type="number" id="litros3" step="0.01"></label>
+  <label>KM: <input type="number" id="km3"></label>
+
+  <button onclick="registrarAbastecimentos()">Calcular Média</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
